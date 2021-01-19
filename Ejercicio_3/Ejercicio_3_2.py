@@ -13,12 +13,9 @@ arbolesEncontrados = dict()
 
 with open("inputMahatma.txt") as file:
     linea1 = file.readline() # La primera linea se salta
-    #print(-1, linea1) # TODO ------------------------------------------------------------------------------------
     longitudX = len(linea1.rstrip())
     for counter, line in enumerate(file): # Desplazamiento en Y
-        #print(counter, line) # TODO --------------------------------------------------------------------------------------
         for i, (x, y) in zip(range(len(slopes)), slopes):
-            #if (counter % 2 == 0) and (y == 2): #------------------------------------------------------------
             # Nos movemos hacia abajo la cantidad que dice el patrón actual
             if (counter % y == 0) and (y != 1):
                 continue

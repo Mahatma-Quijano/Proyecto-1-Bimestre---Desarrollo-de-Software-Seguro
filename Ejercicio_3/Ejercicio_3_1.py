@@ -1,5 +1,6 @@
 # Variable para almacenar la cantidad de árboles encontrados
 arboles = 0
+
 with open("inputMahatma.txt") as file:
     desplX = 0  # Desplazamiento en X
     linea1 = file.readline() # La primera linea se salta
