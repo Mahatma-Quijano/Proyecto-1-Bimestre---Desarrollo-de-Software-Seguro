@@ -25,6 +25,9 @@ def countBags(color, dictionary):
     if color in dictionary:
         value = 0
         for bag in dictionary[color]:
+            # Se almacenan el número de bolsas de un color
+            # y se multiplica este número por las bolsas ue se encuentren
+            # dentro de el nuevo color
             value += bag[0] + bag[0] * countBags(bag[1], dictionary)
         return value
     return 0 # No cuenta bolsas vacias

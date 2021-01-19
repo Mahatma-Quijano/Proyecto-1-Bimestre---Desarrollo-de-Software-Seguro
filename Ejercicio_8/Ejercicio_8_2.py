@@ -33,9 +33,6 @@ def runCode(code, pc, seenPC, acc):
         elif instruction == "nop":
             pc += 1
 
-    if pc in seenPC.keys(): # TODO: Esto solo imprime el valor que encontro repetido
-        print(instruction, value) # TODO: Asi que no sirve de nada
-
     return acc, pc, seenPC
 
 # Obtenemos las tuplas
