@@ -1,16 +1,16 @@
-#Se crea una lista del reporte en blanco
+# Se crea una lista del reporte en blanco
 expenseReport = []
 
-#Se abre y se coloca los elementos del archivo en la lista
+# Se abre y se coloca los elementos del archivo en la lista
 with open("inputMahatma.txt") as file:
     for line in file:
         expenseReport.append(int(line.rstrip()))
 
-#Se ordena la lista y obtenemos su longitud
+# Se ordena la lista y obtenemos su longitud
 expenseReport.sort()
 length = len(expenseReport)
 
-#Se crea una función de busqueda binaria
+# Se crea una función de busqueda binaria
 def find(num, min, max, lista):
     medio = (min + max) // 2
     if min > max:
@@ -24,9 +24,9 @@ def find(num, min, max, lista):
         return True
     return find(num, min, max, lista)
 
-#Se itera por cada par de números del reporte, para ver que valor sumado a estos
-#da como resultado 2020, para posteriormente aplicar busqueda binaria y
-#comprobar su existencia en la lista del reporte
+# Se itera por cada par de números del reporte, para ver que valor sumado a estos
+# da como resultado 2020. Luego se aplica busqueda binaria y
+# se comprueba su existencia en la lista del reporte
 for i in range(0, length):
     num1 = expenseReport[i]
     for j in range(i+1, length):

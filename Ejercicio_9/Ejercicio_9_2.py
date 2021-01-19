@@ -52,7 +52,7 @@ def encryptionWeakness (value, numbers):
 
 numbers = []
 # Abrir el archivo y almacenar cada número en una lista como enteros
-with open("inputDiana.txt") as file:
+with open("inputMahatma.txt") as file:
     for number in file:
         numbers.append(int(number))
 # Llamar al método de ataque al algoritmo criptografico "eXchange-Masking Addition System (XMAS)"
