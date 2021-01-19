@@ -1,9 +1,12 @@
+# Implementación propia de una Lista Enlazada en Python
+
 # Clase Nodo
 class Node():
     def __init__(self, data):
         self.data = data
         self.next = None
 
+    # Definir siguiente Nodo
     def setNext(self, node):
         self.next = node
 
@@ -13,9 +16,10 @@ class LinkedList():
         self.head = None
         self.last = None
 
+    # Añadir un nuevo nodo
     def add(self, data):
         newNode = Node(data)
-        if self.head == None:
+        if self.head == None: # Si está vacía el nuevo Nodo es el Head
             self.head = newNode
             self.last = newNode
         else:
@@ -26,6 +30,7 @@ class LinkedList():
             self.last = newNode
         return newNode
 
+    # Imprime la sucesión de los Nodos desde un Nodo "since"
     def printSince(self, since):
         node = self.head
         while node.data != since.data:
@@ -37,6 +42,7 @@ class LinkedList():
             else:
                 print(node.data, end='')
 
+    # Devuelve la sucesión de nodos desde el Head
     def array(self):
         array = []
         node = self.head
@@ -48,5 +54,6 @@ class LinkedList():
         array.append(node)
         return array
 
+    # Apunta el último Nodo al Head para que sea una Lista Enlazada Circular
     def makeCycle(self):
         self.last.setNext(self.head)

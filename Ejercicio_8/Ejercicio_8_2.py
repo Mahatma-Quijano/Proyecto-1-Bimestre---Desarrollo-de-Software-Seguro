@@ -1,5 +1,5 @@
 archivo = "inputDiana.txt"
-# Varaibles a usar mas adelante
+# Variables a usar mas adelante
 pc = 0
 acc = 0
 seenPC = {}
