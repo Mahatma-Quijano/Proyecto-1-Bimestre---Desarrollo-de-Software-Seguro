@@ -6,8 +6,9 @@ with open(archivo) as file:
     # Proceso para cada grupo
     for line in file:
         yesAnswers = []
+        # Los grupos se separan por líneas en blanco
         while (line != '\n') and (len(line) != 0):
-            # Cada persona
+            # Bucle por cada persona
             for letter in line.rstrip():
                 # Guarda letras no existentes en el array
                 if letter not in yesAnswers:

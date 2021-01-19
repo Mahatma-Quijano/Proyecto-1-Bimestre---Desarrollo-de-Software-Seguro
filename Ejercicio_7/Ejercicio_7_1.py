@@ -1,5 +1,5 @@
 import re
-archivo = "inputMahatma.txt"
+archivo = "inputDiana.txt"
 bagRules = {}
 validBags = []
 
@@ -36,20 +36,3 @@ for color in validBags:
 
 # El resultado es la longitud de la lista de colores que llevan a una bolsa Shiny Gold
 print("Bolsas que llevan a una Shiny Gold", len(validBags))
-
-
-
-# TODO: Ver si se hace o no con recursividad
-quit()
-
-def countBags(validBags, dictionary):
-    for color in validBags:
-        count = 0
-        for bag in dictionary[color]:
-            if bag[0] != color:
-                count = 1 + countBags([bag[0]], dictionary)
-        return count
-    return 0
-
-print(validBags)
-print(countBags(validBags, bagRules))
