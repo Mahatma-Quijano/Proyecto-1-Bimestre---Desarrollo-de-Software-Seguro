@@ -26,14 +26,6 @@ def year(value, field, requiredFields):
 
 # Función que verifica las médidas del campo HGT
 def measure(value, requiredFields):
-    # TODO: Mejorar esto con un for para que se use los valores cm e in
-    #for i in range(len(requiredFields["hgt"])):
-    #    medida = value.split('c')[0]
-    #    min = requiredFields["hgt"][i][0]
-    #    max = requiredFields["hgt"][i][1]
-    #    if (min <= int(medida)) and (int(medida) <= max):
-    #        return True
-
     if re.match("[0-9]{3}cm", value):
         medida = value.split('c')[0]
         min = requiredFields["hgt"][0][0]
