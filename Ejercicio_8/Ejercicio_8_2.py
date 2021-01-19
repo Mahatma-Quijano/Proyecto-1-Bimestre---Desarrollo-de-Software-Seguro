@@ -49,7 +49,6 @@ else:
         # Tomamos el nombre la instrucción
         instruction = bootCode[i][0]
         flag = False
-        nextPC = i # TODO: no es necesario ponerle i
         # Si la instrucción es JMP, le damos el comportamiento del NOP
         if instruction == "jmp":
             nextPC = i + 1
